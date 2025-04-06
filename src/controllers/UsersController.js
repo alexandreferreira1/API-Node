@@ -7,6 +7,10 @@ class UsersController {
         if (!name) {
             throw new AppError('O nome é obrigatório!')
         }
+
+        if (!email) {
+            throw new Error('Email obrigatório')
+        }
         
         response.json({name, email, password})
     }
